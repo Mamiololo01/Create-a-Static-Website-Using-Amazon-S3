@@ -1,0 +1,13 @@
+Make sure you are in us-east-1 (N. Virginia) for the lab environment.
+The 2 HTML files required from this lab can be downloaded by Saving As these 2 files: index.html and error.html . You will find these files in the following GitHub repository: https://github.com/ACloudGuru-Resources/Course-Certified-Solutions-Architect-Associate/tree/master/labs/creating-a-static-website-using-amazon-s3 .
+Note: When creating the bucket, uncheck all four checkboxes on step 3 — Set Permissions. 
+If you skip this step, you will not be allowed to create the bucket policy later. If you made a mistake and created the bucket without unchecking the 
+checkboxes, you may go to Bucket > Permissions > Public access settings > Edit, and uncheck all four restrictions. Then add a bucket policy, 
+go to Bucket > Permissions > Bucket Policy, and add the following JSON statement (replacing <MY_BUCKET> with your bucket name):
+{ "Version": "2012-10-17", "Id": "Policy1645724938586", "Statement": [ { "Sid": "Stmt1645724933619", "Effect": "Allow", "Principal": "*", "Action": 
+"s3:GetObject", "Resource": "<BUCKET_ARN>/*" } ] }
+**Note:** Ensure the trailing `/*` is present so the policy applies to all objects within the bucket.
+1. Click Save changes.
+2
+Ensure the trailing /* is present so the policy applies to all objects within the bucket.
+
