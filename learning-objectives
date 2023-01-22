@@ -1,0 +1,22 @@
+Create S3 Bucket
+
+Create an S3 bucket that begins with the name my-bucket (e.g., my-bucket-<ACCOUNT ID>) in the us-east-1 region. When creating the bucket, remember to uncheck the S3 Block Public 
+Access settings. Upload the code for the static site. You will find the code (index.html and error.html) in the following GitHub repository: 
+https://github.com/ACloudGuru-Resources/Course-Certified-Solutions-Architect-Associate/tree/master/labs/creating-a-static-website-using-amazon-s3
+Run Progress Check
+
+
+Enable Static Website Hosting
+
+You can use Amazon S3 to host a static website. On a static website, individual web pages include static content. They might also contain client-side scripts.
+To host a static website on Amazon S3, configure an Amazon S3 bucket for website hosting, and then upload your website content to the bucket.
+When you configure a bucket as a static website, you must enable website hosting, set permissions, and create and add an index document.
+You must ensure that the S3 Block Public Access settings are disabled on the bucket, so that the files in the bucket can be made publicly readable.
+Run Progress Check
+Skip
+
+Apply Bucket Policy
+
+To make objects in your bucket publicly readable, write a bucket policy that grants everyone s3:GetObject permission.
+Note that AWS will not permit you to create the policy if the S3 Block Public Access settings are still enabled on the bucket.
+After disabling the Block Public Access settings, you can add a bucket policy to grant public read access to your bucket. When you grant public read access, anyone on the internet can access y
